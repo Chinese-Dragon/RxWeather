@@ -6,8 +6,12 @@ target 'RxWeather' do
   use_frameworks!
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'RxAlamofire'
   pod 'SwiftyJSON'
+  pod 'RxAlamofire'
+  pod 'DZNEmptyDataSet'
+  pod 'Charts'
+  pod 'GooglePlaces'
+  pod 'Alamofire'
   # Pods for RxWeather
 
 end

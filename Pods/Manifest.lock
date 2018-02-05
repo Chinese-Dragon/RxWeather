@@ -1,5 +1,12 @@
 PODS:
   - Alamofire (4.6.0)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - DZNEmptyDataSet (1.8.1)
+  - GoogleMaps/Base (2.5.0)
+  - GooglePlaces (2.5.0):
+    - GoogleMaps/Base (= 2.5.0)
   - RxAlamofire (4.0.0):
     - RxAlamofire/Core (= 4.0.0)
   - RxAlamofire/Core (4.0.0):
@@ -11,6 +18,10 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - DZNEmptyDataSet
+  - GooglePlaces
   - RxAlamofire
   - RxCocoa
   - RxSwift
@@ -18,11 +29,15 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 9fc3c59fca4b080e796405a0d24ba10e66847799
+PODFILE CHECKSUM: 64735810c4f606517bd6ab1152f2adc11f2f8ff3
 
 COCOAPODS: 1.3.1
