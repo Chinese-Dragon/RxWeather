@@ -118,6 +118,7 @@ extension WeathersTableViewController: CLLocationManagerDelegate {
 		if let myLocation = locations.last {
 			// send the first signal
 			viewModel.cityCoordinate.onNext(myLocation.coordinate)
+			viewModel.citiesCoordinates.append(myLocation.coordinate)
 		}
 	}
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

@@ -25,18 +25,6 @@ extension Date {
 	}
 }
 
-extension UIViewController {
-	// computed property
-	var contents: UIViewController {
-		// implicit getter
-		if let navCon = self as? UINavigationController {
-			return navCon.visibleViewController ?? self
-		} else {
-			return self
-		}
-	}
-}
-
 extension UIColor {
 	static let cellBackgroundColor = UIColor(displayP3Red: 85.0/255.0, green: 85.0/255.0, blue: 95.0/255.0, alpha: 1)
 	static let primaryTextColor = UIColor(displayP3Red: 166.0/255.0, green: 166.0/255.0, blue: 166.0/255.0, alpha: 1)

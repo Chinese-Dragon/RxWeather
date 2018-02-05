@@ -33,10 +33,6 @@ final class WeathersViewModel {
 		
 		let currentWeatherStream = cityCoordinate
 			.asObservable()
-			.distinctUntilChanged {
-				$0.latitude == $1.latitude
-				&& $0.longitude == $1.longitude
-			}
 			.flatMap { [weak self] coord -> Observable<Weather> in
 				// transform coordinates into weathers
 				return (self?.apiService.fetchWeather(cityLocation: coord))!
@@ -44,10 +40,6 @@ final class WeathersViewModel {
 		
 		let forcastesStream = cityCoordinate
 			.asObservable()
-			.distinctUntilChanged {
-				$0.latitude == $1.latitude
-					&& $0.longitude == $1.longitude
-			}
 			.flatMap { [weak self] coord -> Observable<[Weather.Forecast]> in
 				return (self?.apiService.fetchForecasts(cityLocation: coord))!
 		}
@@ -84,7 +76,6 @@ final class WeathersViewModel {
 				}
 			}
 			timer.fire()
-			
 			return Disposables.create {
 				timer.invalidate()
 			}

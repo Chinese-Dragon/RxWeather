@@ -107,8 +107,7 @@
 				4D5095322022C5020008A6B5 /* Controller */,
 				4D7B1A1D2023B9BC00232B9B /* View */,
 				4D5095362022C5410008A6B5 /* Network */,
-				4D7B1A2C2024157C00232B9B /* Utilities.swift */,
-				4D73E38E202631620085976B /* Keys.swift */,
+				4D6033262028B2220078E65E /* Utilities */,
 			);
 			path = RxWeather;
 			sourceTree = "<group>";
@@ -157,6 +156,15 @@
 				4D7B1A222023CC3B00232B9B /* APIEndPoints.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4D6033262028B2220078E65E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4D7B1A2C2024157C00232B9B /* Utilities.swift */,
+				4D73E38E202631620085976B /* Keys.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4D7B1A1D2023B9BC00232B9B /* View */ = {
