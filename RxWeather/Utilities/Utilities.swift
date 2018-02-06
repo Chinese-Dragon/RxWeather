@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import CoreLocation
+import APTimeZones
 
 extension Date {
 	var sunTime: String {
@@ -22,6 +24,17 @@ extension Date {
 		let formatter = DateFormatter()
 		formatter.dateFormat = "E"
 		return formatter.string(from: self)
+	}
+	
+	static func getLocalTime(withLocation location: CLLocation) -> String {
+		let currentTime = Date()
+		let formatter = DateFormatter()
+		let timeZone = APTimeZones.sharedInstance().timeZone(with: location)
+		formatter.timeZone = timeZone
+		formatter.dateFormat = "h:mm a"
+		formatter.amSymbol = "AM"
+		formatter.pmSymbol = "PM"
+		return formatter.string(from: currentTime)
 	}
 }
 

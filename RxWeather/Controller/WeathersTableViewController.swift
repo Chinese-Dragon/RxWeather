@@ -98,18 +98,6 @@ class WeathersTableViewController: UIViewController {
 		let filter = GMSAutocompleteFilter()
 		filter.type = .city
 		controller.autocompleteFilter = filter
-//		controller.primaryTextColor = UIColor.primaryTextColor
-//		controller.primaryTextHighlightColor = UIColor.primaryTextHighlight
-//		controller.secondaryTextColor = UIColor.secondaryTextColor
-//		controller.tableCellBackgroundColor = UIColor.cellBackgroundColor
-//		controller.tableCellSeparatorColor = UIColor.cellSeperator
-//		controller.navigationController?.navigationBar.barTintColor = UIColor.navBarTint
-//		controller.navigationController?.navigationBar.tintColor = UIColor.navBarTint
-//		if #available(iOS 11.0, *) {
-//			controller.navigationItem.searchController?.searchBar.barTintColor = UIColor.searchBarTint
-//		} else {
-//			// Fallback on earlier versions
-//		}
 	}
 }
 

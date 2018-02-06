@@ -17,7 +17,7 @@ class WeatherCell: UITableViewCell {
 	
 	var weather: Weather? {
 		didSet {
-			lastUpdateTime.text = weather!.lastUpdatedTime?.sunTime
+			lastUpdateTime.text = weather!.lastUpdatedTime
 			city.text = weather!.cityName
 			if let temp = weather!.currentTemp {
 				temperature.text = "\(temp)º"

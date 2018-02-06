@@ -19,7 +19,7 @@ final class WeatherViewModel {
 	var condition: Variable<String> = Variable("")
 	var detailItems: Variable<[Weather.WeatherItem]> = Variable([])
 	var foreacasts: Variable<[Weather.Forecast]> = Variable([])
-	var lastUpdatedTime: Variable<Date> = Variable(Date())
+	var lastUpdatedTime: Variable<String> = Variable("")
 	
 	init() {
 		weather

@@ -71,7 +71,6 @@ class WeatherViewController: UIViewController {
 		
 		viewModel.lastUpdatedTime
 			.asObservable()
-			.map { $0.sunTime }
 			.bind(to: lastUpdatedTime.rx.text)
 			.disposed(by: dispose)
 			

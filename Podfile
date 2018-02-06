@@ -12,6 +12,7 @@ target 'RxWeather' do
   pod 'Charts'
   pod 'GooglePlaces'
   pod 'Alamofire'
+  pod 'APTimeZones'
   # Pods for RxWeather
 
 end

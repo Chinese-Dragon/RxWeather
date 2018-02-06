@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import SwiftyJSON
+import CoreLocation
 
 class Weather {
 	enum WeatherItem {
@@ -71,7 +72,7 @@ class Weather {
 	
 	var cityName: String?
 	var currentTemp: Int?
-	var lastUpdatedTime: Date?
+	var lastUpdatedTime: String?
 	var icon: String?
 
 	var condition: String?
@@ -79,7 +80,7 @@ class Weather {
 	var forecasts: [Forecast] = []
 	
 	init(id: Int? = nil, name: String? = nil, temp: Int? = nil,
-		 time: Date? = nil, weatherIcon: String? = nil,
+		 time: String? = nil, weatherIcon: String? = nil,
 		 weatherCondition: String? = nil, details: [WeatherItem]? = nil,
 		 weatherForecasts: [Forecast]? = nil) {
 		cityId = id
@@ -99,12 +100,18 @@ class Weather {
 	}
 	
 	init?(json: JSON) {
-		cityId = json["id"].int ?? 0
-		cityName = json["name"].string
-		currentTemp = json["main"]["temp"].int
-		lastUpdatedTime = Date()
-		condition = json["weather"][0]["description"].string
-		icon = json["weather"][0]["icon"].string
+		let countryCode = json["sys"]["country"].string!
+		cityId = json["id"].int!
+		cityName = "\(json["name"].string!), \(countryCode)"
+		currentTemp = json["main"]["temp"].int!
+		condition = json["weather"][0]["description"].string!
+		icon = json["weather"][0]["icon"].string!
+		
+		// get weather local time from geo coordinates
+		let lat = json["coord"]["lat"].double!
+		let lon = json["coord"]["lon"].double!
+		let location = CLLocation(latitude: lat, longitude: lon)
+		lastUpdatedTime = Date.getLocalTime(withLocation: location)
 		
 		// construct weather items
 		let humidity = WeatherItem.humidity(json["main"]["humidity"].int!)

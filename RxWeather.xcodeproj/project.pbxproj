@@ -14,6 +14,7 @@
 		4D5095242022C4650008A6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5095222022C4650008A6B5 /* LaunchScreen.storyboard */; };
 		4D50952D2022C4DD0008A6B5 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D50952C2022C4DD0008A6B5 /* WeatherViewModel.swift */; };
 		4D5095342022C5220008A6B5 /* WeatherAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5095332022C5220008A6B5 /* WeatherAPIService.swift */; };
+		4D6033292028E8D20078E65E /* timezonesDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D6033282028E8D10078E65E /* timezonesDB.json */; };
 		4D73E38F202631620085976B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73E38E202631620085976B /* Keys.swift */; };
 		4D7B1A232023CC3B00232B9B /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B1A222023CC3B00232B9B /* APIEndPoints.swift */; };
 		4D7B1A272024088000232B9B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B1A262024088000232B9B /* Weather.swift */; };
@@ -37,6 +38,7 @@
 		4D5095252022C4650008A6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D50952C2022C4DD0008A6B5 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		4D5095332022C5220008A6B5 /* WeatherAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIService.swift; sourceTree = "<group>"; };
+		4D6033282028E8D10078E65E /* timezonesDB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timezonesDB.json; sourceTree = "<group>"; };
 		4D73E38E202631620085976B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4D7B1A222023CC3B00232B9B /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
 		4D7B1A262024088000232B9B /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		4D50952B2022C4700008A6B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D6033282028E8D10078E65E /* timezonesDB.json */,
 				4D5095192022C4650008A6B5 /* AppDelegate.swift */,
 				4D5095202022C4650008A6B5 /* Assets.xcassets */,
 				4D5095222022C4650008A6B5 /* LaunchScreen.storyboard */,
@@ -239,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6033292028E8D20078E65E /* timezonesDB.json in Resources */,
 				4D5095242022C4650008A6B5 /* LaunchScreen.storyboard in Resources */,
 				4D5095212022C4650008A6B5 /* Assets.xcassets in Resources */,
 				4D50951F2022C4650008A6B5 /* Main.storyboard in Resources */,
@@ -291,6 +295,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxWeather/Pods-RxWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APTimeZones/APTimeZones.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
@@ -301,6 +306,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APTimeZones.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
